@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body,html{
+        margin: 0%;
+        padding: 0%;
+        height: 100%;
+    
+    }
+    h2{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 200%;
+    }
+    .container{
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        
+        
+    } 
+    .boxx{
+        text-align: center;
+        
+    }
+
+    .box{
+        background-color: whitesmoke;
+        text-align: center;
+        padding: 20px 110px;
+        border-radius: 20px;
+
+    }
+    p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 300%;
+    }
+    button{
+
+        background-color: skyblue;
+        padding: 20px 50px;
+        border-radius: 50%;
+
+    }
+    button:hover{
+        background-color: #fff;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="boxx">
+            <p id="text">Good Morning</p>
+            <div class="box">
+                <br><br><br>
+       
+
+            
+            <button onclick="dec()">Decrement</button>
+            <button onclick="inc()">Increment</button><br><br>
+            <p id="counter">0</p>
+
+
+        </div>
+
+    </div>
+    <script>
+       let counter =0;
+       let a=16;
+       let b=2;
+            function inc(){
+                if(counter<0){
+                    return;
+                }
+                document.getElementById("counter").innerHTML = ++counter;
+                document.getElementById("text").style.fontSize=(a+counter *b)+"px";
+
+            }
+            function dec(){
+                if(counter<=0){
+                    return;
+                }
+                document.getElementById("counter").innerHTML = --counter;
+                document.getElementById("text").style.fontSize=(a+counter *b)+"px";
+
+            }
+
+
+
+
+    </script>
+    
+</body>
+</html>
